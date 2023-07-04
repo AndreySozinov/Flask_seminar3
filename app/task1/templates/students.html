@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ super() }} - {{ title }}
+{% endblock %}
+
+{% block content %}
+<h1>Студенты</h1>
+<table class="table table-striped">
+  <thead class="table-dark">
+  <tr>
+    <th scope="col">Имя</th>
+    <th scope="col">Фамилия</th>
+    <th scope="col">Возраст</th>
+    <th scope="col">Пол</th>
+    <th scope="col">Группа</th>
+    <th scope="col">Факультет</th>
+  </tr>
+  </thead>
+  <tbody>
+  {% for student in students %}
+  <tr>
+    <th>{{ student.firstname }}</th>
+    <th>{{ student.lastname }}</th>
+    <th>{{ student.age }}</th>
+    <th>{{ student.sex }}</th>
+    <th>{{ student.group }}</th>
+    <th>{{ student.faculty.name }}</th>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
