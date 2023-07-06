@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Success</title>
+</head>
+<body>
+  <h1>Congratulations!</h1>
+    <h2>Пользователи</h2>
+      {% for user in users %}
+        <h3>{{ user.firstname + ' ' + user.lastname }}</h3>
+      {% endfor %}
+</body>
+</html>

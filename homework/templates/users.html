@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+</head>
+<body>
+    <h2>Пользователи</h2>
+      {% for user in users %}
+        <h3>{{ user.firstname + ' ' + user.lastname }}</h3>
+      {% endfor %}
+</body>
+</html>
